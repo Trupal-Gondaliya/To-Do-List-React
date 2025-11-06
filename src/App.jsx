@@ -25,10 +25,16 @@ function App() {
     );
   }
 
+  function deleteItem(id){
+    setToDo(
+      todo.filter(data => data.id !==  id)
+    );
+  }
+
   return (
     <>
       <Header onAddItem = {addTodoItem}/>
-      <ToDoList todoitems = {todo} onEdit = {edit}/>
+      <ToDoList todoitems = {todo} onEdit = {edit} onDelete = {deleteItem}/>
     </>
   )
   
