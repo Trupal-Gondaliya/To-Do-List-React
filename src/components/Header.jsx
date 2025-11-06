@@ -12,18 +12,22 @@ function Header(props) {
 
     return (
         <div className="flex flex-col justify-center items-center">
-            <h1 className="text-4xl m-4">To Do List</h1>
+            <h1 className="flex items-center text-4xl font-bold m-4 text-[#242f6d]">
+                <img src="/todo.png" alt="Todo Icon" className="w-15 h-15 mr-3" />
+                ToDo List
+            </h1>
+
             <div className="mb-6 flex gap-2">
                 <input
                     type="text"
                     value={addItem}
-                    className="border w-90 p-2"
+                    className="border-2 w-90 p-2 bg-[#ffffff]"
                     placeholder="Enter a task..."
                     onChange={(e) => setAddItem(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && handelAdd()}
                 />
                 <button
-                    className="border p-2 bg-yellow-400 hover:bg-yellow-600 cursor-pointer transition-all"
+                    className="p-2 px-5 bg-[#805cec] text-white font-bold hover:bg-[#fba1ef] cursor-pointer transition-all"
                     onClick={handelAdd}
                 >
                     Add

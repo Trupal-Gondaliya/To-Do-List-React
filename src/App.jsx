@@ -38,10 +38,10 @@ function App() {
   }
 
   return (
-    <>
+    <div>
       <Header onAddItem = {addTodoItem}/>
       <ToDoList todoitems = {todo} onEdit = {edit} onDelete = {deleteItem} ontoggleMarkCom = {toogleMarkCom}/>
-    </>
+    </div>
   )
   
 }
