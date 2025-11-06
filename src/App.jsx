@@ -19,10 +19,16 @@ function App() {
     setNextId(nextId + 1);
   }
 
+  function edit(id,newText){
+    setToDo(
+      todo.map(data => data.id === id ? {...data,text:newText} : data)
+    );
+  }
+
   return (
     <>
       <Header onAddItem = {addTodoItem}/>
-      <ToDoList todoitems = {todo}/>
+      <ToDoList todoitems = {todo} onEdit = {edit}/>
     </>
   )
   

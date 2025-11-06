@@ -20,6 +20,7 @@ function Header(props) {
                     className="border w-90 p-2"
                     placeholder="Enter a task..."
                     onChange={(e) => setAddItem(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && handelAdd()}
                 />
                 <button
                     className="border p-2 bg-yellow-400 hover:bg-yellow-600 cursor-pointer transition-all"

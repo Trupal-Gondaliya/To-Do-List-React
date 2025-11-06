@@ -1,9 +1,9 @@
 import ToDoItem from "./ToDoItem";
 
-function ToDoList(props){
+function ToDoList({todoitems,onEdit}){
     return(
         <div>
-            {props.todoitems.map(data => <ToDoItem key={data.id} item={data}  />)}
+            {todoitems.map(data => <ToDoItem key={data.id} item={data} onEdit = {onEdit} />)}
         </div>
     )
 }
