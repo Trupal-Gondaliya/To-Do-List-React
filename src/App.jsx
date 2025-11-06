@@ -31,10 +31,16 @@ function App() {
     );
   }
 
+  function toogleMarkCom(id){
+    setToDo(
+      todo.map(data => data.id === id ? {...data,completed:!data.completed}: data)
+    );
+  }
+
   return (
     <>
       <Header onAddItem = {addTodoItem}/>
-      <ToDoList todoitems = {todo} onEdit = {edit} onDelete = {deleteItem}/>
+      <ToDoList todoitems = {todo} onEdit = {edit} onDelete = {deleteItem} ontoggleMarkCom = {toogleMarkCom}/>
     </>
   )
   

@@ -39,7 +39,10 @@ function ToDoItem(props) {
                     </div >
                 ) : (
                     <div className="flex justify-between w-full items-center">
-                        <p className="text-left">{props.item.text}</p>
+                        <div className="flex gap-4 ml-4">
+                            <input type="checkbox" checked={props.item.completed} onChange={() => props.ontoggleMarkCom(props.item.id)}/>
+                            <p className={`text-left ${props.item.completed ? "line-through text-gray-500" : ""}`}>{props.item.text}</p>
+                        </div>
                         <div className="flex gap-4 ml-4">
                             <button onClick={() => setIsEditing(true)}><i className="fa-solid fa-pen hover:text-yellow-600 cursor-pointer"></i></button>
                             <button onClick={handelDel}><i className="fa-solid fa-trash text-red-700 hover:text-blue-500 cursor-pointer"></i></button>

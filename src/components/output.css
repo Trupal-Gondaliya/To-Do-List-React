@@ -13,6 +13,7 @@
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-yellow-600: oklch(68.1% 0.162 75.834);
     --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
     --spacing: 0.25rem;
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
@@ -254,8 +255,14 @@
   .break-words {
     overflow-wrap: break-word;
   }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
   .text-red-700 {
     color: var(--color-red-700);
+  }
+  .line-through {
+    text-decoration-line: line-through;
   }
   .underline {
     text-decoration-line: underline;
