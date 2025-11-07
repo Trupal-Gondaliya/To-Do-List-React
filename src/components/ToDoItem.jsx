@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./input.css";
 
 function ToDoItem(props) {
 
@@ -18,7 +19,7 @@ function ToDoItem(props) {
     }
 
     return (
-        <div className="p-3 m-3 w-[70%] max-w-xl rounded-lg flex flex-col items-center justify-center bg-[#fffae4] mx-auto min-h-[70px]">
+        <div className="itembox p-3 m-3 w-[70%] max-w-xl rounded-lg flex flex-col items-center justify-center bg-[#fffae4] mx-auto min-h-[70px]">
             {
                 isEditing ? (
                     // visible if user edit any item
@@ -31,7 +32,7 @@ function ToDoItem(props) {
                             onKeyDown={(e) => e.key === "Enter" && handelEdit()}
                         />
                         <button
-                            className="p-2 text-[#805cec] text-xl font-bold hover:text-[#58d9a1] cursor-pointer transition-all"
+                            className="p-2 text-[#58d9a2] text-xl font-bold hover:text-[#af0d0d] cursor-pointer transition-all"
                             onClick={handelEdit}
                         ><i className="fa-solid fa-check"></i></button>
                         <button

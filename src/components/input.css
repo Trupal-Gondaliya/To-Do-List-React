@@ -1,4 +1,42 @@
 @import "tailwindcss";
-body{
+
+body,
+.inputbox,
+.title {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Default (light mode) */
+body {
     background-color: #f2edff;
+    color: #242f6d;
+}
+
+.title {
+    color: #242f6d;
+}
+
+.inputbox {
+    background-color: #ffffff;
+    border: 2px solid #805cec;
+    color: #000000;
+}
+
+/* Dark mode (applied when .dark-mode class is added to body) */
+body.dark-mode {
+    background: radial-gradient(circle,rgba(18, 17, 17, 1) 0%, rgba(48, 48, 48, 1) 100%);
+}
+
+body.dark-mode .title {
+    color: #ffffff;
+}
+
+body.dark-mode .inputbox {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+body.dark-mode .itembox{
+    background-color: #1c222b;
+    color: white;
 }
